@@ -1,5 +1,15 @@
 import assign from 'assign-deep';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+
+let PropTypes = null;
+
+// eslint-disable-next-line
+PropTypes = require('prop-types');
+
+if (!PropTypes) {
+  PropTypes = React.PropTypes;
+}
+
 import {
   StatusBar,
   StyleSheet,
